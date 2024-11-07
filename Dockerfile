@@ -1,19 +1,15 @@
-FROM node:lts-buster
+FROM quay.io/taira_makino/taira_tech:latest
 
-RUN apt-get update && \
-  apt-get install -y \
-  ffmpeg \
-  imagemagick \
-  webp && \
-  apt-get upgrade -y && \
-  rm -rf /var/lib/apt/lists/*
+RUN git clone https://github.com/Ednut001/Arch-md /root/Anonphoenix007
 
-COPY package.json .
+# Clear npm cache and remove node_modules directories
+RUN npm cache clean --force
+RUN rm -rf /root/Anonphoenix007/node_modules
 
-RUN npm install && npm install qrcode-terminal
+# Install dependencies
+WORKDIR /root/Anonphoenix007
+RUN npm install
 
-COPY . .
-
-EXPOSE 5000
-
-CMD ["node", "index.js", "--autoread"]
+# Add additional Steps To Run...
+EXPOSE 3000
+CMD ["npm","start" ]
