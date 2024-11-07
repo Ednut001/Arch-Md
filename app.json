@@ -1,0 +1,18 @@
+{                                                                     
+  "name": "Arch-Md",                                           
+  "description": "Nodejs wa bot",                                       
+  "repository": "https://github.com/Ednut001/Arch-Md",                                                                     
+  "logo": "https://files.catbox.moe/51vbuh.jpg",           
+  "keywords": ["nodejs", "pair", "multi device"],                                               
+  "buildpacks": [                                                     
+    {                                                                   
+      "url": "heroku/nodejs"                                        
+    },                                                                
+    {                                                                   
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"                                                            
+    },                                                                
+    {                                                                   
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"                                                                  
+    }                                                            
+  ]                                                            
+}
