@@ -18,6 +18,7 @@ modul: {
 	path: require('path'),
     api: require('api-dylux'),
     googleTTS: require('google-tts-api'),
-	PhoneNumber: require('awesome-phonenumber')
+	PhoneNumber: require('awesome-phonenumber'),
+    ndown: require('nayan-media-downloader')
 }
 }
