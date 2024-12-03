@@ -2,7 +2,7 @@
     "name": "archmd",
     "version": "1.0.0",
     "description": "ArchPatch",
-    "main": "fork.js",
+    "main": "index.js",
     "scripts": {
     "start": "node index.js"
   },
