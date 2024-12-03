@@ -38,7 +38,7 @@ emitOwnEvents: true,
 fireInitQueries: true,
 generateHighQualityLinkPreview: true,
 syncFullHistory: true,
-markOnlineOnConnect: false,
+markOnlineOnConnect: true,
 browser: ["Ubuntu", "Chrome", "20.0.04"],
 });
 
