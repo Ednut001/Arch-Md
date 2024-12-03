@@ -183,9 +183,6 @@ ednut.ev.on("connection.update",async  (koneksi) => {
 				startBotz();
 			} else if (reason === DisconnectReason.connectionLost) {
 				console.log("Connection Lost from Server, reconnecting...");
-			 startBotz();
-			} else if (reason === DisconnectReason.connectionReplaced) {
-				console.log("Connection Replaced, Another New Session Opened, Please Close Current Session First");
 				startBotz()
 			} else if (reason === DisconnectReason.loggedOut) {
 				console.log(`Device Logged Out, Please Delete Session and Scan Again.`);
