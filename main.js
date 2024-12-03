@@ -26,7 +26,7 @@ const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream
 const question = (text) => { const rl = readline.createInterface({ input: process.stdin, output: process.stdout }); return new Promise((resolve) => { rl.question(text, resolve) }) };
 
 async function startBotz() {
-const { state, saveCreds } = await useMultiFileAuthState("session")
+const { state, saveCreds } = await useMultiFileAuthState("sesion")
 const ednut = makeWASocket({
 logger: pino({ level: "silent" }),
 printQRInTerminal: false,
@@ -59,7 +59,7 @@ if (mek.key && mek.key.remoteJid === "status@broadcast") return;
 if (!ednut.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
 if (mek.key.id.startsWith("BAE5") && mek.key.id.length === 16) return;
 m = smsg(ednut, mek, store);
-require("./case")(ednut, m, chatUpdate, store);
+require("./ednut.js")(ednut, m, chatUpdate, store);
 } catch (err) {
 console.log(err);
 }
