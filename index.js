@@ -173,7 +173,6 @@ ednut.ev.on("connection.update",async  (koneksi) => {
   const {connection, lastDisconnect} = koneksi
 
   if(connection == "open"){
-  ednut.sendMessage(ednut.user.id, {text: `\`\`\`Arch Md connected successfully\`\`\`\n\n\`\`\`prefix:-  ${global.xprefix}\`\`\`\n\n\`\`\`channel :- https://whatsapp.com/channel/0029VamspnPB4hdUnvLaIX17 \n\nsupport :- https://chat.whatsapp.com/HO2JGN8YHr9IOf4XOSRhGe \n\nnote if bot doesn't respond kindly restart from host don't forget to follow up for latest update on arch Md thanks for using 👋 Regards\n𝓔𝓭𝓷𝓾𝓽\`\`\``})
   console.log('[Arch Connected to] ' + JSON.stringify(ednut.user.id, null, 2));
 }
 
