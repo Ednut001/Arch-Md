@@ -4,7 +4,7 @@
     "description": "ArchPatch",
     "main": "index.js",
     "scripts": {
-    "start": "node index.js"
+    "start": "node main.js"
   },
   "author": "Ednut",
   "dependencies": {
