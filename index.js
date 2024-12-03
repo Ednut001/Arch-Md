@@ -191,6 +191,7 @@ ednut.ev.on("connection.update",async  (koneksi) => {
 		}
 		{
   }
+	startBotz()
   })
   
 ednut.ev.on("creds.update", saveCreds);
