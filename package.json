@@ -37,7 +37,6 @@
     "qrcode-terminal": "^0.12.0",
     "youtube-yts": "^2.0.0",
   "@hapi/boom": "^10.0.1",
-      "nayan-media-downloader": "^2.6.7",
   "@vitalets/google-translate-api": "^9.2.0",
   "@vreden/youtube_scraper": "^1.0.2",
   "api-dylux": "^1.7.2",
