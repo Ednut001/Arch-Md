@@ -10,7 +10,7 @@
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
     "@colors/colors": "1.5.0",
-    "@whiskeysockets/baileys": "github:wansky05/baileys-evolution",
+      "@whiskeysockets/baileys": "^6.7.8",
     "awesome-phonenumber": "^2.64.0",
     "@bochilteam/scraper": "^5.0.1",
     "phone" : "3.1.30",
@@ -30,7 +30,6 @@
     "node-cache": "^5.1.2",
     "node-cron": "^3.0.3",
     "node-webpmux": "^3.1.5",
-      "node" : "^20.18.1",
     "pastebin-js": "^1.0.6",
     "path": "^0.12.7",
     "pino": "^8.1.0",
