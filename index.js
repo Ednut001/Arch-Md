@@ -85,7 +85,7 @@ const deleteFolderRecursive = function (pathsesi) {
     fs.rmdirSync(pathsesi);
   }
 }
-const pairingCode = true
+const pairingCode = false
 // save database every 30seconds
 if (global.db) setInterval(async () => {
     if (global.db.data) await global.db.write()
