@@ -173,7 +173,7 @@ ednut.ev.on("connection.update",async  (koneksi) => {
   if(connection == "open"){
   console.log('[Arch Connected to] ' + JSON.stringify(ednut.user.id, null, 2));
 } 
-	if (connection === 'close') {}
+	if (connection === 'close') {
 			let reason = new Boom(lastDisconnect?.error)?.output.statusCode
 			if (reason === DisconnectReason.badSession) {
 				console.log(`Bad Session File, Please Delete Session and Scan Again`);
@@ -414,4 +414,4 @@ fs.unwatchFile(file);
 console.log(`Update ${__filename}`);
 delete require.cache[file];
 require(file);
-}););
+});
