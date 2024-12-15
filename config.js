@@ -8,12 +8,15 @@ const chalk = require("chalk")
 const fs = require("fs")
 
 //======= Change settings =======\\
-global.owner = ["2347036214381"] // owner number 
-global.botname = ["Arch Md"] // don't change 
-global.simbol = "♘" // don't change 
-global.typeMenu = 'v1' //don't change 
-global.anticall = false // your choice 
+global.owner = ["2347036214381"] 
+global.botname = ["Arch Md"]
+global.simbol = "♘"
+global.typeMenu = 'v5' //don't change 
+global.anticall = false // set true to turn anticall always on
 global.xprefix = '.' // your desired prefix
+global.presence = 'available' // available to show always online // unavailable to show not oniline //composing to show fake typing //recording to show fake recording audio
+global.thumb = 'https://pomf2.lain.la/f/4pdqc01o.jpg' // your menu image
+global.timezone = 'Africa/Lagos' // input timezone codrectly with continuent then / city if input wrongly might cause error
 //======= Don't change =======\\
 
 global.prefa = ['.']
@@ -28,6 +31,7 @@ global.msg = {
     bot: 'This feature could be used by bot only',
     wait: 'processing...',
     linkm: 'Where is the link?',
+    ban: 'Sorry you have been banned 🚶from using command contact owner to unban ❌'
     }
 //==========================
     

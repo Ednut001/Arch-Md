@@ -85,7 +85,7 @@ const deleteFolderRecursive = function (pathsesi) {
     fs.rmdirSync(pathsesi);
   }
 }
-const pairingCode = false
+const pairingCode = true
 // save database every 30seconds
 if (global.db) setInterval(async () => {
     if (global.db.data) await global.db.write()
@@ -169,29 +169,24 @@ ednut.serializeM = (m) => smsg(ednut, m, store);
 //read messages
 ednut.ev.on("connection.update",async  (koneksi) => {
   const {connection, lastDisconnect} = koneksi
+ 
+ 
+
+
+if (connection === "connecting") {
+  // console.log("Connecting to WhatsApp!");
+}
+
+let connectionmessage = `\`\`\`Arch Md connected successfully\`\`\`\n\n\`\`\`prefix:-  ${global.xprefix}\`\`\`\n\n\`\`\`channel :- https://whatsapp.com/channel/0029VamspnPB4hdUnvLaIX17 \n\nsupport :- https://chat.whatsapp.com/HO2JGN8YHr9IOf4XOSRhGe \n\nnote if bot doesn't respond kindly restart from host don't forget to follow up for latest update on arch Md thanks for using 👋 Regards\n𝓔𝓭𝓷𝓾𝓽\`\`\``
 
   if(connection == "open"){
+  ednut.sendMessage(ednut.user.id, {text: `${connectionmessage}`})
   console.log('[Arch Connected to] ' + JSON.stringify(ednut.user.id, null, 2));
-} 
-	if (connection === 'close') {
-			let reason = new Boom(lastDisconnect?.error)?.output.statusCode
-			if (reason === DisconnectReason.badSession) {
-				console.log(`Bad Session File, Please Delete Session and Scan Again`);
-			} else if (reason === DisconnectReason.connectionClosed) {
-				console.log("Connection closed, reconnecting....");
-			} else if (reason === DisconnectReason.connectionLost) {
-				console.log("Connection Lost from Server, reconnecting...");
-			} else if (reason === DisconnectReason.loggedOut) {
-				console.log(`Device Logged Out, Please Delete Session and Scan Again.`);
-			} else if (reason === DisconnectReason.restartRequired) {
-				console.log("Restart Required, Restarting...");
-			} else if (reason === DisconnectReason.timedOut) {
-				console.log("Connection TimedOut, Reconnecting...");
-			} else ednut.end(`Unknown DisconnectReason: ${reason}|${connection}`)
-		}
-		{
+}
+
+  if (connection === "close" && lastDisconnect && lastDisconnect.error && lastDisconnect.error.output.statusCode != 401){
+  startBotz()
   }
-	startBotz()
   })
   
 ednut.ev.on("creds.update", saveCreds);
@@ -226,7 +221,7 @@ ednut.ev.on('group-participants.update', async (anu) => {
     try {
       let metadata = await ednut.groupMetadata(anu.id)
       const groupDesc = metadata.desc;
-      const welDate = moment.tz('Afria/Lagos').format('DD/MM/YYYY')
+      const welDate = moment.tz(`${global.timezone}`).format('DD/MM/YYYY')
       let members = metadata.participants.length
       let participants = anu.participants
       for (let num of participants) {

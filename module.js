@@ -18,6 +18,8 @@ modul: {
 	path: require('path'),
     api: require('api-dylux'),
     googleTTS: require('google-tts-api'),
-	PhoneNumber: require('awesome-phonenumber')
+	PhoneNumber: require('awesome-phonenumber'),
+    nou: require("node-os-utils"),
+    res: require('btch-downloader')
 }
 }
